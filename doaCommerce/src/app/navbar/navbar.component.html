@@ -28,14 +28,35 @@
                 <li class="nav-item mx-0 mx-lg-1"><a class="nav-link text-monospace texto text-uppercase font-weight-bold py-3 px-0 px-lg-3"  routerLink='/categorias'>Categorias</a></li>
                 <li class="nav-item mx-0 mx-lg-1"><a class="nav-link text-monospace texto text-uppercase font-weight-bold py-3 px-0 px-lg-3"  routerLink='/contato'>Contato</a></li>
                 <li class="nav-item mx-0 mx-lg-1"><a class="nav-link text-monospace texto text-uppercase font-weight-bold py-3 px-0 px-lg-3"  routerLink='/saiba-mais'>Saiba mais</a></li>
+
+
+                    
+                    
+
+
                  <!--Menu de login-->
             
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle nav-link text-monospace texto text-uppercase font-weight-bold py-3 px-0 px-lg-3"  href="#" data-toggle="dropdown" id="entrar">Entre</a>
                         <div class="dropdown-menu">
-                            <a class="dropdown-item bg-info"  href="#">Login</a>
-                            <a class="dropdown-item bg-info"  href="#">Cadastro</a>
 
+                            <div *ngIf='auth.btnLogin()'>
+                                <li class="nav-item">
+                                  <a class="nav-link texto text-monospace text-uppercase font-weight-bold p-3" routerLink='/login'>Login</a>
+                                </li>
+                              </div>
+                      
+                              <div *ngIf='auth.btnLogin()'>
+                                <li class="nav-item">
+                                  <a class="nav-link texto text-monospace text-uppercase font-weight-bold p-3" routerLink='/cadastro'>Cadastro</a>
+                                </li>
+                              </div>
+
+                            <div *ngIf='auth.btnSair()'>
+                                <li class="nav-item">
+                                  <a class="nav-link texto text-monospace text-uppercase font-weight-bold p-3" (click)='sair()'>Sair</a>
+                                </li>
+                              </div>
                         </div>
                     </li>
                 </ul>
