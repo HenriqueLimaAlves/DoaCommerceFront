@@ -10,6 +10,7 @@ export class Produto{
     public categoria: Categoria
     public doacao: Usuario[]
     public usuario: Usuario
+    
 
 
 }
