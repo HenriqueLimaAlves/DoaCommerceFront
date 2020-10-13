@@ -20,6 +20,7 @@ import { CadastroComponent } from './cadastro/cadastro.component';
 import { from } from 'rxjs';
 import { ProdutoComponent } from './produto/produto.component';
 import { ProdutoCategoriaComponent } from './produto-categoria/produto-categoria.component';
+import { DoeComponent } from './doe/doe.component';
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import { ProdutoCategoriaComponent } from './produto-categoria/produto-categoria
     LoginComponent,
     CadastroComponent,
     ProdutoComponent,
-    ProdutoCategoriaComponent
+    ProdutoCategoriaComponent,
+    DoeComponent
 
   ],
   imports: [
