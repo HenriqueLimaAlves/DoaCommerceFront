@@ -19,6 +19,7 @@ export class ProdutoCategoriaComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    window.scroll(0, 0)
     this.findAllCategoria()
   }
   findAllCategoria(){
