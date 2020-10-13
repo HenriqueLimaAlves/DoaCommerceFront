@@ -35,7 +35,7 @@
                     <th scope="row">{{item.id}}</th>
                     <td>{{item.categoria}}</td> <!--descrição?-->
                     <td class="d-flex justify-content-end">
-                       <a class="btn btn-outline-info mr-3">Editar</a>
+                       <a class="btn btn-outline-info mr-3" [routerLink]="['/editar-categoria', item.id]">Editar</a>
                        <a class="btn btn-outline-danger">Apagar</a>
                     </td>   
                   </tr>
