@@ -21,6 +21,10 @@ import { from } from 'rxjs';
 import { ProdutoComponent } from './produto/produto.component';
 import { ProdutoCategoriaComponent } from './produto-categoria/produto-categoria.component';
 import { DoeComponent } from './doe/doe.component';
+import { PutProdutoComponent } from './put-produto/put-produto.component';
+import { PutCategoriaComponent } from './put-categoria/put-categoria.component';
+import { DeleteProdutoComponent } from './delete-produto/delete-produto.component';
+import { DeleteCategoriaComponent } from './delete-categoria/delete-categoria.component';
 
 
 @NgModule({
@@ -35,7 +39,11 @@ import { DoeComponent } from './doe/doe.component';
     CadastroComponent,
     ProdutoComponent,
     ProdutoCategoriaComponent,
-    DoeComponent
+    DoeComponent,
+    PutProdutoComponent,
+    PutCategoriaComponent,
+    DeleteProdutoComponent,
+    DeleteCategoriaComponent
 
   ],
   imports: [

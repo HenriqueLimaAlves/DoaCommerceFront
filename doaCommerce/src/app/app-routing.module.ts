@@ -8,6 +8,10 @@ import { ProdutoCategoriaComponent } from './produto-categoria/produto-categoria
 import { ProdutoComponent } from './produto/produto.component';
 import { SaibaMaisComponent } from './saiba-mais/saiba-mais.component';
 import { DoeComponent } from './doe/doe.component';
+import { PutProdutoComponent } from './put-produto/put-produto.component';
+import { DeleteProdutoComponent } from './delete-produto/delete-produto.component';
+import { PutCategoriaComponent } from './put-categoria/put-categoria.component';
+import { DeleteCategoriaComponent } from './delete-categoria/delete-categoria.component';
 
 const routes: Routes = [
   { path:'', redirectTo: 'home', pathMatch:'full'},
@@ -18,7 +22,11 @@ const routes: Routes = [
   { path: 'cadastro', component: CadastroComponent},
   { path: 'produtos', component: ProdutoComponent},
   { path: 'produto-categoria', component: ProdutoCategoriaComponent},
-  { path: 'doe', component: DoeComponent}
+  { path: 'doe', component: DoeComponent},
+  {path: 'editar-produto/:id', component: PutProdutoComponent},
+  {path: 'delete-produto/:id', component: DeleteProdutoComponent},
+  {path: 'editar-categoria/:id', component: PutCategoriaComponent},
+  {path: 'delete-categoria/:id', component: DeleteCategoriaComponent},
 ];
 
 @NgModule({
