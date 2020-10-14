@@ -8,8 +8,8 @@
              <div class="card-header">
                  <div class="row d-flex align-items-center">
                      <div class="col-md-8">
-                         <h5 class="card-title">{{categoria.titulo}} </h5>
-                         <small>Tema: {{postagem.tema.descricao}}</small>
+                         <h5 class="card-title">{{produto.nome}} </h5>
+                         <small>Categoria: {{produto.categoria.categoria}}</small>
                      </div>
                      <div class="col-md-4 d-flex justify-content-end">
                      </div>
@@ -17,9 +17,9 @@
              </div>
   
              <div class="card-body" >
-               <p class="card-text" aria-describedby="texto">{{postagem.texto}} </p>
-               <small id="texto" class="form-text m-0 text-muted mb-3">
-                 Postado em {{ postagem.data | date:'dd/MM/yyyy'}} às {{postagem.data | date:'HH:mm'}}</small>
+               <p class="card-text" aria-describedby="texto">{{produto.nome}} </p>
+               <!-- <small id="texto" class="form-text m-0 text-muted mb-3"> -->
+                 <!-- Postado em {{ postagem.data | date:'dd/MM/yyyy'}} às {{postagem.data | date:'HH:mm'}}</small> -->
              </div>
           </div>
   

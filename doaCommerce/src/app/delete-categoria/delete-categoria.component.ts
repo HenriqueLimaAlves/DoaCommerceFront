@@ -8,7 +8,7 @@ import { CategoriaService } from '../service/categoria.service';
   templateUrl: './delete-categoria.component.html',
   styleUrls: ['./delete-categoria.component.css']
 })
-export class DeleteTemaComponent implements OnInit {
+export class DeleteCategoriaComponent implements OnInit {
 
   categoria: Categoria = new Categoria()
 
@@ -33,12 +33,12 @@ export class DeleteTemaComponent implements OnInit {
 
   btnSim() {
     if (this.categoria.categoria.length != 0) {
-      alert('Essa categoria não pode ser modificado, pois já pertence a uma postagem.')
-      this.router.navigate(['/cadastro-tema'])
+      alert('Essa categoria não pode ser modificada, pois já pertence a um produto.')
+      this.router.navigate(['/cadastro-categoria'])
     } else {
       this.categoriaService.deleteCategoria(this.categoria.id).subscribe(() => {
         this.router.navigate(['/doe'])
-        alert('Tema apagado com sucesso!')
+        alert('Categoria apagada com sucesso!')
       })
     }
 

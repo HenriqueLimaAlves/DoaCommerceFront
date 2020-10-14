@@ -17,13 +17,12 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ContatoComponent } from './contato/contato.component';
 import { LoginComponent } from './login/login.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
-import { from } from 'rxjs';
 import { ProdutoComponent } from './produto/produto.component';
 import { ProdutoCategoriaComponent } from './produto-categoria/produto-categoria.component';
 import { DoeComponent } from './doe/doe.component';
 import { PutProdutoComponent } from './put-produto/put-produto.component';
-import { PutCategoriaComponent } from './put-categoria/put-categoria.component';
 import { DeleteProdutoComponent } from './delete-produto/delete-produto.component';
+import { PutCategoriaComponent } from './put-categoria/put-categoria.component';
 import { DeleteCategoriaComponent } from './delete-categoria/delete-categoria.component';
 
 
@@ -41,9 +40,10 @@ import { DeleteCategoriaComponent } from './delete-categoria/delete-categoria.co
     ProdutoCategoriaComponent,
     DoeComponent,
     PutProdutoComponent,
-    PutCategoriaComponent,
     DeleteProdutoComponent,
+    PutCategoriaComponent,
     DeleteCategoriaComponent
+    
 
   ],
   imports: [

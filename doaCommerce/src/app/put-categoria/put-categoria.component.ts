@@ -8,7 +8,7 @@ import { CategoriaService } from '../service/categoria.service';
   templateUrl: './put-categoria.component.html',
   styleUrls: ['./put-categoria.component.css']
 })
-export class PutTemaComponent implements OnInit {
+export class PutCategoriaComponent implements OnInit {
 
   categoria: Categoria = new Categoria()
 
@@ -22,10 +22,10 @@ export class PutTemaComponent implements OnInit {
   ngOnInit() {
     window.scroll(0,0)
     let id: number = this.route.snapshot.params["id"];
-    this.findByIdTema(id);
+    this.findByIdCategoria(id);
   }
 
-  findByIdTema(id: number) {
+  findByIdCategoria(id: number) {
     this.categoriaService.getByIdCategoria(id).subscribe((resp: Categoria) => {
       this.categoria = resp;
     })
@@ -34,8 +34,8 @@ export class PutTemaComponent implements OnInit {
   salvar() {
       this.categoriaService.putCategoria(this.categoria).subscribe((resp: Categoria) => {
         this.categoria = resp
-        this.router.navigate(['/cadastro-tema'])
-        alert('Tema atualizado com sucesso!')
+        this.router.navigate(['/cadastro-categoria'])
+        alert('categoria atualizada com sucesso!')
       })
     }
   }

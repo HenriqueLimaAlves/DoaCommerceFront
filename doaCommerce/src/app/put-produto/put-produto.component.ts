@@ -35,7 +35,7 @@ export class PutProdutoComponent implements OnInit {
     this.findByIdProduto(this.idPost)
 
 
-    this.findAllTemas()
+    this.findAllCategorias()
   }
 
   findByIdProduto(id: number) {
@@ -43,7 +43,11 @@ export class PutProdutoComponent implements OnInit {
       this.produto = resp
     })
   }
-
+findByIdCategoria() {
+  this.categoriaService.getByIdCategoria(this.idCategoria).subscribe((resp: Categoria) => {
+    this.categoria = resp
+  })
+}
   salvar(){
     this.categoria.id = this.idCategoria
     this.produto.categoria = this.categoria
@@ -59,7 +63,7 @@ export class PutProdutoComponent implements OnInit {
     })
   }
 
-  findAllTemas() {
+  findAllCategorias() {
     this.categoriaService.getAllCategoria().subscribe((resp: Categoria[]) => {
       this.listaCategorias = resp
     })

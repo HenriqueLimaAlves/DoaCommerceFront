@@ -9,7 +9,7 @@ import { Produto } from '../model/Produto';
   templateUrl: './delete-produto.component.html',
   styleUrls: ['./delete-produto.component.css']
 })
-export class DeletePostagemComponent implements OnInit {
+export class DeleteProdutoComponent implements OnInit {
 
   produto: Produto = new Produto()
 
@@ -35,7 +35,7 @@ export class DeletePostagemComponent implements OnInit {
   btnSim() {
     this.produtoService.deleteProduto(this.produto.id).subscribe(() => {
       this.router.navigate(['/doe'])
-      alert('Postagem apagada com sucesso!')
+      alert('Produto apagado com sucesso!')
     })
   }
 
