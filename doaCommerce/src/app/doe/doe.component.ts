@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Categoria } from '../model/Categoria';
 import { Produto } from '../model/Produto';
+import { ProdutoService } from '../service/produto.service';
 
 
 @Component({
@@ -17,9 +18,18 @@ export class DoeComponent implements OnInit {
   listaCategorias: Categoria[]
   idCategoria: number
 
-  constructor() { }
+  constructor(
+    private produtoService: ProdutoService
+  ) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.findAllProdutos()
+  }
+
+  findAllProdutos() {
+    this.produtoService.getAllProdutos().subscribe((resp: Produto[]) => {
+      this.listaProdutos = resp
+    })
   }
 
 }

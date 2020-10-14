@@ -13,6 +13,15 @@
             </div>
 
             <div class="form-group">
+              <label class="text-monospace" for="imagem">Imagem:</label>
+              <input type="text" class="form-control" id="imagem" placeholder="Coloque o link da imagem." [(ngModel)]='produto.img'>
+          </div>
+          <div class="form-group">
+            <label class="text-monospace" for="texto">Texto:</label>
+            <input type="text" class="form-control" id="texto" placeholder="Digite aqui a descrição" [(ngModel)]='produto.texto'>
+        </div>
+
+            <div class="form-group">
                 <label class="text-monospace" for="quantidade">Quantidade:</label>
                 <input type="number" class="form-control" id="number" placeholder="Digite a quantidade do produto" [(ngModel)]='produto.quantidade'>
             </div>
