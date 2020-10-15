@@ -36,13 +36,13 @@
                 acidentes).</small>
             </legend>
             <div class="col-sm-10">
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="{{urgente}} "c(change)="urgente($event)" checked>
+
+              <div class="form-check" *ngFor='let item of urgente'>
+                <input  class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="{{item}}" (change)="urgenteSelecionado($event)">
                 <label class="form-check-label" for="gridRadios1">
-                  Sim
+                  {{item}}
                 </label>
               </div>
-           
 
             </div>
           </div>

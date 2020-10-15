@@ -18,11 +18,12 @@ export class ProdutoComponent implements OnInit {
   produto: Produto = new Produto()
   listaProdutos: Produto[]
 
+  selecionado: string
   urgente: any=[
     "Sim",
     "Não"
   ]
-  
+
 
   categoria: Categoria = new Categoria()
   listaCategorias: Categoria[]
@@ -41,18 +42,29 @@ export class ProdutoComponent implements OnInit {
     this.findAllCategoria()
 
   }
+
+  urgenteSelecionado(event: any){
+    this.selecionado = event.target.value
+  }
+
 findAllProdutos(){
   this.produtoService.getAllProdutos().subscribe((resp: Produto[]) => { this.listaProdutos = resp})
 }
 
 publicar (){
+  if (this.selecionado == 'Sim'){
+    this.produto.urgente = true
+  } else {
+    this.produto.urgente = false
+  }
   this.categoria.id = this.idCategoria
-  this.produto.categoria = this.categoria 
+  this.produto.categoria = this.categoria
 
-  if( this.produto.nome == null || this.produto.quantidade == null || this.produto.categoria == null){
+  if( this.produto.nome == null || this.produto.quantidade == null || this.produto.categoria == null || this.produto.urgente == null){
   alert ('Preencha os campos corretamente.')
 } else {
-  this.produtoService.postProduto(this.produto).subscribe((resp: Produto) => { this.produto =  resp
+  this.produtoService.postProduto(this.produto).subscribe((resp: Produto) => {
+  this.produto =  resp
   this.produto =  new Produto()
   alert('Produto postado com sucesso!')
   this.findAllProdutos()

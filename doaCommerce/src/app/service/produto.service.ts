@@ -30,4 +30,8 @@ export class ProdutoService {
     return this.http.delete(`http://localhost:8080/produtos/${id}`, this.token)
   }
 
+  getProdutoByUrgente(urgente: boolean){
+    return this.http.get(`http://localhost:8080/produtos/urgente/${urgente}`, this.token)
+  }
+
 }

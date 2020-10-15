@@ -12,7 +12,7 @@ export class Produto{
     public usuario: Usuario
     public img: string
     public texto: string
-    
+
 
 
 }

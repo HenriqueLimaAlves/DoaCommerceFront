@@ -14,7 +14,7 @@
         <img class="d-block w-100 img-fluid" src="assets/doa6.jpg" alt="Segundo Slide">
         <div class="carousel-caption d-none d-md-block">
           <h3 class=" "  >O Dia de Doar é um grande movimento para promover a doação no Brasil. É uma mobilização que promove um país mais generoso e solidário, por meio da conexão de pessoas com causas. E faz isso celebrando o prazer que é doar, e o hábito de doar o tempo todo.</h3>
-          
+
         </div>
       </div>
       <!-- <div class="carousel-item">
@@ -38,63 +38,27 @@
 
   <!--Cards/Produtos-->
 <div class="container">
-  <h3 class="text-center text-uppercase font-weight-bold">Confira alguns pedidos:</h3>
-  <div class="card-deck">
-    <div class="card">
-      <img class="card-img-top" src="assets/sabonete-liquido.svg" width="100" height="100" alt="Imagem de capa do card">
-      <div class="card-body">
-        <h5 class="card-title">50 sabonetes hipoalergênicos</h5>
-        <h6>ONG: Viva e deixe viver</h6>
-        <p class="card-text"></p>
+  <h3 class="text-center text-uppercase font-weight-bold">Confira alguns pedidos Urgentes:</h3>
+
+  <div class="row">
+    <div class="col-md-4" *ngFor="let item of listaProdutos">
+      
+      <div class="card" >
+        <img class="card-img-top" src="{{item.img}}" width="100" height="100" alt="Imagem de capa do card">
+        <div class="card-body">
+          <h5 class="card-title">{{item.nome}}</h5>
+          <h6>ONG: Viva e deixe viver</h6>
+          <p class="card-text"></p>
+        </div>
+        <a href="#" class="btn btn-bg texto text-uppercase font-weight-bold">Doar</a>
       </div>
-      <a href="#" class="btn btn-bg texto text-uppercase font-weight-bold">Doar</a>
-    </div>
-
-
-    <div class="card">
-      <img class="card-img-top" src="assets/roupas-limpas.svg " width="100" height="100" alt="Imagem de capa do card">
-      <div class="card-body">
-        <h5 class="card-title">10 casacos de inverno</h5>
-        <h6>ONG: Blábláblá </h6>
-        
-        <p class="card-text"></p>
-      </div>
-    <a href="#" class="btn btn-bg texto text-uppercase font-weight-bold">Doar</a>
-    
-
-
     </div>
   </div>
+
 </div>
 
 <br>
 
-<div class="container">
-  <div class="card-deck">
-    <div class="card">
-      <img class="card-img-top" src="assets/roupas-limpas.svg " width="100" height="100"alt="Imagem de capa do card">
-      <div class="card-body">
-        <h5 class="card-title">10 calças de moletom</h5>
-        <p class="card-text"></p>
-      </div>
-      <a href="#" class="btn btn-bg texto text-uppercase font-weight-bold">Doar</a>
-    </div>
-
-
-    <div class="card">
-      <img class="card-img-top" src="assets/sabonete-liquido.svg " width="100" height="100" alt="Imagem de capa do card">
-      <div class="card-body">
-        <h5 class="card-title">50 shampoos infantis</h5>
-        <h6>ONG: Blábláblá </h6>
-        <p class="card-text"></p>
-      </div>
-    <a href="#" class="btn btn-bg texto text-uppercase font-weight-bold">Doar</a>
-    
-
-
-    </div>
-  </div>
-</div>
 
 <br>
 <div class="container">
@@ -103,7 +67,7 @@
 
 <br>
 
-  
+
 
   <!--Cards/ doadores do mês-->
 <div class="jumbotron bg-color">
@@ -116,7 +80,7 @@
       <div class="card-body">
         <h5 class="card-title text-center">2 lugar</h5>
         <p class="card-text">Doou não sei quantos reais em produtos, para não sei quantas ONGs!</p>
-       
+
       </div>
     </div>
     <div class="card">
@@ -124,7 +88,7 @@
       <div class="card-body">
         <h5 class="card-title text-center">1 lugar</h5>
         <p class="card-text">Doou não sei quantos reais em produtos, para não sei quantas ONGs!</p>
-        
+
       </div>
     </div>
     <div class="card">
@@ -132,7 +96,7 @@
       <div class="card-body">
         <h5 class="card-title text-center">3 lugar</h5>
         <p class="card-text">Doou não sei quantos reais em produtos, para não sei quantas ONGs!</p>
-        
+
       </div>
      </div>
     </div>

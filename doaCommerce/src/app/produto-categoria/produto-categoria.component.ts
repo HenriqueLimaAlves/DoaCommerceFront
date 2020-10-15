@@ -25,7 +25,7 @@ export class ProdutoCategoriaComponent implements OnInit {
   findAllCategoria(){
     this.categoriaService.getAllCategoria().subscribe((resp: Categoria[]) => { this.listaCategorias = resp})
   }
-  
+
   findByIdCategoria() {
     this.categoriaService.getByIdCategoria(this.categoria.id).subscribe((resp: Categoria) => { this.categoria = resp})
   }
@@ -35,8 +35,8 @@ export class ProdutoCategoriaComponent implements OnInit {
       alert ('Preencha o campo corretamente')
     } else {
       this.categoriaService.postCategoria(this.categoria).subscribe((resp: Categoria) => { this.categoria = resp
-      this.router.navigate(['/produto'])
-      alert('Produto cadastrado com sucesso!')
+      this.router.navigate(['/produtos'])
+      alert('Categoria cadastrada com sucesso!')
       })
     }
   }
