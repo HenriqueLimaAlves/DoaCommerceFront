@@ -18,6 +18,12 @@ export class ProdutoComponent implements OnInit {
   produto: Produto = new Produto()
   listaProdutos: Produto[]
 
+  urgente: any=[
+    "Sim",
+    "Não"
+  ]
+  
+
   categoria: Categoria = new Categoria()
   listaCategorias: Categoria[]
   idCategoria: number
