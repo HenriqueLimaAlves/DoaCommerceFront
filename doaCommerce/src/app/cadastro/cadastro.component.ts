@@ -1,6 +1,9 @@
+
+
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Usuario } from '../model/Usuario';
+import { AlertasService } from '../service/alertas.service';
 import { AuthService } from '../service/auth.service';
 
 @Component({
@@ -10,21 +13,37 @@ import { AuthService } from '../service/auth.service';
 })
 export class CadastroComponent implements OnInit {
 
+
   usuario: Usuario = new Usuario()
   senha: string
+  emailOk =false
   constructor(
     private authService: AuthService,
-    private router: Router
+    private router: Router,
+    private alert: AlertasService
   ) { }
 
   ngOnInit() {
     window.scroll(0, 0)
   }
+  verificaEmail(){
+    let txt = document.getElementById("txtEmail")
+ if(this.usuario.email.indexOf("@") == -1 || this.usuario.email.indexOf(".") == -1){
+  txt.innerHTML = "email invalido"
+  txt.style.color ="red"
+  this.emailOk = false
+ }else{
+   txt.innerHTML = "email válido"
+   txt.style.color ="green"
+
+   this.emailOk = true
+
+ }
+  }
 
   conferirSenha(event: any) {
     this.senha = event.target.value
   }
-
 
   cadastrar(){
   // this.usuario.cpfCpnj=12346567892
@@ -34,17 +53,18 @@ export class CadastroComponent implements OnInit {
     this.usuario.produto=[]
     this.usuario.produtoDoacao=[]
 
-    if(this.senha === this.usuario.senha){
+    if(this.senha === this.usuario.senha || this.emailOk){
       this.authService.cadastrar(this.usuario).subscribe((resp: Usuario) =>{
         this.usuario = resp
         this.router.navigate(['/login'])
-        alert('Usuário cadastrado com sucesso')
+        this.alert.showAlertSuccess('Usuário cadastrado com sucesso')
       })
 
 
     }else{
-      alert('Digite senhas iguais')
+      this.alert.showAlertDanger('Usuario não cadastrado, digite suas senhas iguais')
     }
 
   }
+
 }
