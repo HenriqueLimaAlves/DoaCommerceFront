@@ -4,4 +4,5 @@ export class Categoria {
     public id: number
     public categoria: string
     public produto: Produto[]
+    public img: string
 }

@@ -27,6 +27,7 @@ import { PutCategoriaComponent } from './put-categoria/put-categoria.component';
 import { DeleteCategoriaComponent } from './delete-categoria/delete-categoria.component';
 import { AlertasComponent } from './alertas/alertas.component';
 import { from } from 'rxjs';
+import { ListaProdutoCategoriaComponent } from './lista-produto-categoria/lista-produto-categoria.component';
 
 
 @NgModule({
@@ -46,7 +47,8 @@ import { from } from 'rxjs';
     DeleteProdutoComponent,
     PutCategoriaComponent,
     DeleteCategoriaComponent,
-    AlertasComponent
+    AlertasComponent,
+    ListaProdutoCategoriaComponent
 
 
   ],

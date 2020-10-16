@@ -34,4 +34,7 @@ export class ProdutoService {
     return this.http.get(`http://localhost:8080/produtos/urgente/${urgente}`, this.token)
   }
 
+  getByProdutoCategoria(id: number) {
+    return this.http.get(`http://localhost:8080/categorias/${id}`, this.token)
+  }
 }

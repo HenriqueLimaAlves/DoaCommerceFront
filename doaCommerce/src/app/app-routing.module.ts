@@ -1,3 +1,4 @@
+import { ListaProdutoCategoriaComponent } from './lista-produto-categoria/lista-produto-categoria.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { CadastroComponent } from './cadastro/cadastro.component';
@@ -22,6 +23,7 @@ const routes: Routes = [
   { path: 'produto-categoria', component: ProdutoCategoriaComponent},
   { path: 'doe', component: DoeComponent},
   {path: 'editar-produto/:id', component: PutProdutoComponent},
+  {path: 'lista-produto-categoria/:categoria', component: ListaProdutoCategoriaComponent}
 
 ];
 
