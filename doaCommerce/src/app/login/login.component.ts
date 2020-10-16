@@ -24,6 +24,7 @@ export class LoginComponent implements OnInit {
     this.authService.logar(this.userLogin).subscribe((resp: UserLogin) =>{
       this.userLogin = resp
       localStorage.setItem('token', this.userLogin.token)
+      localStorage.setItem('tipoPessoa', this.userLogin.tipoPessoa.toString())
       this.router.navigate(['/home'])
     })
   }

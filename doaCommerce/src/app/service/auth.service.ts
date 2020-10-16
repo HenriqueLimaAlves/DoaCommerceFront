@@ -37,5 +37,15 @@ btnLogin(){
   return ok
 
 }
+isONG(){
+  let ok = false
+  let tipoPessoa = localStorage.getItem('tipoPessoa')
+
+  if(tipoPessoa == '3'){
+    ok = true
+  }
+  return ok
+}
+
 
 }
