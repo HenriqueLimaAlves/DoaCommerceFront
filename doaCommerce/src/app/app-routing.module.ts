@@ -1,3 +1,5 @@
+import { DeleteProdutoComponent } from './delete-produto/delete-produto.component';
+
 import { ListaProdutoCategoriaComponent } from './lista-produto-categoria/lista-produto-categoria.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
@@ -23,7 +25,9 @@ const routes: Routes = [
   { path: 'produto-categoria', component: ProdutoCategoriaComponent},
   { path: 'doe', component: DoeComponent},
   {path: 'editar-produto/:id', component: PutProdutoComponent},
-  {path: 'lista-produto-categoria/:categoria', component: ListaProdutoCategoriaComponent}
+  {path: 'lista-produto-categoria/:categoria', component: ListaProdutoCategoriaComponent},
+  {path: 'delete-produto', component: DeleteProdutoComponent}
+
 
 ];
 

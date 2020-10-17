@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Categoria } from '../model/Categoria';
+import { AlertasService } from '../service/alertas.service';
 import { CategoriaService } from '../service/categoria.service';
 
 @Component({
@@ -16,6 +17,7 @@ export class DeleteCategoriaComponent implements OnInit {
     private categoriaService: CategoriaService,
     private router: Router,
     private route: ActivatedRoute,
+    private alert: AlertasService
   ) { }
 
   ngOnInit() {
@@ -33,12 +35,12 @@ export class DeleteCategoriaComponent implements OnInit {
 
   btnSim() {
     if (this.categoria.categoria.length != 0) {
-      alert('Essa categoria não pode ser modificada, pois já pertence a um produto.')
+      this.alert.showAlertDanger('Essa categoria não pode ser modificada, pois já pertence a um produto.')
       this.router.navigate(['/cadastro-categoria'])
     } else {
       this.categoriaService.deleteCategoria(this.categoria.id).subscribe(() => {
         this.router.navigate(['/doe'])
-        alert('Categoria apagada com sucesso!')
+        this.alert.showAlertSuccess('Categoria apagada com sucesso!')
       })
     }
 

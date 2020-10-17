@@ -1,9 +1,11 @@
+import { AlertasService } from './../service/alertas.service';
 import { Produto } from './../model/Produto';
 import { Categoria } from './../model/Categoria';
 import { CategoriaService } from './../service/categoria.service';
 import { ProdutoService } from './../service/produto.service';
 import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Component({
   selector: 'app-home',
@@ -22,7 +24,9 @@ export class HomeComponent implements OnInit {
   constructor(
     private router: Router,
     private produtoService: ProdutoService,
-    private categoriaService: CategoriaService
+    private categoriaService: CategoriaService,
+    private http: HttpClient,
+    private alert: AlertasService
   ) { }
 
   ngOnInit() {
@@ -30,6 +34,11 @@ export class HomeComponent implements OnInit {
     this.findAllProdutosByUrgente()
     this.findAllCategoria()
   }
+  token = {
+    headers: new HttpHeaders().set('Authorization', localStorage.getItem('token'))
+  }
+
+
 
   findAllProdutosByUrgente(){
     this.produtoService.getProdutoByUrgente(true).subscribe((resp: Produto[])=>{
@@ -45,4 +54,23 @@ export class HomeComponent implements OnInit {
     this.categoriaService.getByIdCategoria(this.idCategoria).subscribe((resp: Categoria) => { this.categoria = resp})
   }
 
+
+
+
+   btnVerifica(){
+    let ok = false
+    let token = localStorage.getItem('token')
+
+    if(token != null){
+      ok = true
+      this.router.navigate(["/delete-produto"])
+
+    }
+    else{
+      ok = false
+      this.alert.showAlertDanger("Voce precisa estar logado primeiro")
+      this.router.navigate(["/login"])
+    }
+
+  }
 }

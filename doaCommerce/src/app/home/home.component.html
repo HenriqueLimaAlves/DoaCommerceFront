@@ -14,7 +14,7 @@
           <img class="d-block w-100 img-fluid" src="assets/doa6.jpg" alt="Segundo Slide">
           <div class="carousel-caption d-none d-md-block">
             <h3 class=" "  >O Dia de Doar é um grande movimento para promover a doação no Brasil. É uma mobilização que promove um país mais generoso e solidário, por meio da conexão de pessoas com causas. E faz isso celebrando o prazer que é doar, e o hábito de doar o tempo todo.</h3>
-  
+
           </div>
         </div>
         <!-- <div class="carousel-item">
@@ -34,15 +34,15 @@
   <br>
   <br>
   <br>
-  
+
     <!--Cards/Produtos-->
   <div class="container">
     <h3 class="text-center text-uppercase font-weight-bold">Confira alguns pedidos Urgentes:</h3>
     <br>
-  
+
     <div class="row">
       <div class="col-md-4" *ngFor="let item of listaProdutos">
-        
+
         <div class="card" >
           <img class="card-img-top" src="{{item.img}}" width="100" height="200" alt="Imagem de capa do card">
           <div class="card-body">
@@ -50,29 +50,30 @@
             <!-- <h6>{{item.texto}}</h6> -->
             <p class="card-text"></p>
           </div>
-          <a href="#" class="btn btn-bg texto text-uppercase font-weight-bold">Doar</a>
+         <button ton type="submit" class="btn btn-bg texto text-uppercase font-weight-bold "(click)='btnVerifica()'>Doar</button>
+
         </div>
       </div>
     </div>
-  
+
   </div>
-  
+
   <br>
-  
-  
+
+
   <br>
   <div class="container">
   <a href="#" class="btn btn-bg texto text-uppercase font-weight-bold" routerLink='/doe'>Veja mais</a>
   </div>
-  
+
   <br>
-  
-  
-  
+
+
+
     <!--Cards/ doadores do mês-->
   <div class="jumbotron bg-color">
     <div class="container">
-  
+
       <h2 class="container d-flex justify-content-center text-uppercase font-weight-bold">Doadores do mês:</h2>
       <br>
     <div class="card-deck">
@@ -82,7 +83,7 @@
           <h5 class="card-title text-center">Atingiu a marca de 457 doações.</h5>
           <p class="card-text">A Plante uma Árvore é uma rede social que visa conectar pessoas em prol da Natureza.
             </p>
-  
+
         </div>
       </div>
       <div class="card">
@@ -91,7 +92,7 @@
           <h5 class="card-title text-center">Atingiu a marca de 513 doações.</h5>
           <p class="card-text">I+ é uma rede social do bem para quem quer transformar o mundo em um lugar melhor!
             Tem objetivo de reunir iniciativas em diversas áreas, engajar pessoas e gerar impactos positivos na comunidade. </p>
-  
+
         </div>
       </div>
       <div class="card">
@@ -99,7 +100,7 @@
         <div class="card-body">
           <h5 class="card-title text-center">Atingiu a marca de 487 doações.</h5>
           <p class="card-text">Zuz é uma rede social que aproxima médicos e pacientes. </p>
-  
+
         </div>
        </div>
       </div>

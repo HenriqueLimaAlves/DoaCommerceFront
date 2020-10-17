@@ -1,7 +1,8 @@
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Categoria } from './../model/Categoria';
 import { CategoriaService } from './../service/categoria.service';
 import { Component, OnInit } from '@angular/core';
+import { AlertasService } from '../service/alertas.service';
 
 
 @Component({
@@ -16,8 +17,9 @@ export class ListaProdutoCategoriaComponent implements OnInit {
   categoriaNome: string
   constructor(
     private categoriaService: CategoriaService,
-    private route: ActivatedRoute
-    
+    private route: ActivatedRoute,
+    private alert: AlertasService,
+    private router: Router
   ) {
    }
 
@@ -31,4 +33,6 @@ export class ListaProdutoCategoriaComponent implements OnInit {
       this.listaCategoria = resp
     })
   }
+
+
 }

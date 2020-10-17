@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Categoria } from '../model/Categoria';
 import { Produto } from '../model/Produto';
+import { AlertasService } from '../service/alertas.service';
 import { CategoriaService } from '../service/categoria.service';
 import { ProdutoService } from '../service/produto.service';
 
@@ -32,7 +33,8 @@ export class ProdutoComponent implements OnInit {
   constructor(
     private router: Router,
     private produtoService: ProdutoService,
-    private categoriaService: CategoriaService
+    private categoriaService: CategoriaService,
+    private alert: AlertasService
   ) { }
 
   ngOnInit() {
@@ -61,12 +63,12 @@ publicar (){
   this.produto.categoria = this.categoria
 
   if( this.produto.nome == null || this.produto.quantidade == null || this.produto.categoria == null || this.produto.urgente == null){
-  alert ('Preencha os campos corretamente.')
+  this.alert.showAlertDanger ('Preencha os campos corretamente.')
 } else {
   this.produtoService.postProduto(this.produto).subscribe((resp: Produto) => {
   this.produto =  resp
   this.produto =  new Produto()
-  alert('Produto postado com sucesso!')
+  this.alert.showAlertSuccess('Produto postado com sucesso!')
   this.findAllProdutos()
 })
 }

@@ -1,4 +1,6 @@
+import { AlertasService } from './../service/alertas.service';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-contato',
@@ -7,10 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContatoComponent implements OnInit {
 
-  constructor() { }
+  constructor(private alert: AlertasService,
+    private router: Router) { }
 
   ngOnInit() {
     window.scroll(0, 0)
   }
 
+  envia(){
+this.alert.showAlertSuccess("Sua mensagem foi enviada com sucesso")
+this.router.navigate(["/home"])
+  }
 }

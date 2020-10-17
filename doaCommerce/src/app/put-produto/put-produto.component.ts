@@ -1,3 +1,4 @@
+import { AlertasService } from './../service/alertas.service';
 import { Categoria } from './../model/Categoria';
 import { ProdutoService } from './../service/produto.service';
 import { Produto } from './../model/Produto';
@@ -26,6 +27,7 @@ export class PutProdutoComponent implements OnInit {
     private produtoService: ProdutoService,
     private router: Router,
     private route: ActivatedRoute,
+    private  alert: AlertasService
   ) { }
 
   ngOnInit(){
@@ -55,10 +57,10 @@ findByIdCategoria() {
     this.produtoService.putProduto(this.produto).subscribe((resp: Produto) => {
       this.produto = resp
       this.router.navigate(['/doe'])
-      alert('Produto alterada com sucesso')
+      this.alert.showAlertSuccess('Produto alterada com sucesso')
     }, err => {
       if (err.status == '500'){
-        alert('Preencha todos os campos corretamente antes de enviar!')
+        this.alert.showAlertDanger('Preencha todos os campos corretamente antes de enviar!')
       }
     })
   }

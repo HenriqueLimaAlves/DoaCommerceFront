@@ -30,6 +30,7 @@ import { from } from 'rxjs';
 import { ListaProdutoCategoriaComponent } from './lista-produto-categoria/lista-produto-categoria.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,

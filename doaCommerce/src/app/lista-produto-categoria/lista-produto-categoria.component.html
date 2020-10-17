@@ -7,13 +7,12 @@
                     <img class="card-img-top" src="{{produto.img}}" width="100" height="200" alt="Imagem de capa do card">
                     <div class="card-body">
                         <h5 class="card-title">{{produto.nome}}</h5>
-                        <!-- <h6>{{item.texto}}</h6> -->
+                        <h6>{{produto.texto}}</h6>
                         <p class="card-text"></p>
                     </div>
-                    <a [routerLink]="['/lista-produto-categoria', item.categoria]"
+                    <a [routerLink]="['/delete-produto']"
                         class="btn btn-bg texto text-uppercase font-weight-bold">Doar</a>
                 </div>
-
 
             </div>
             <!--{{produto.nome}}-->
