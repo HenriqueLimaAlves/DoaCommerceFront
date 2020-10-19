@@ -1,36 +1,36 @@
 <div class="container-fluid">
-  <div class="form-group d-flex justify-content-center">
+  <div class="form-group d-flex justify-content-center text-secondary text-monospace text-uppercase">
     <div class="row">
       <div class="col-md-12">
         <br>
         <h3 class="text-center mp-4 text-monospace font-weight-bold">Publique aqui o seu pedido:</h3>
 
         <div class="form-group">
-          <label class="text-monospace" for="produto">Produto:</label>
+          <label class="text-monospace font-weight-bold" for="produto">Produto:</label>
           <input type="text" class="form-control" id="nome" placeholder="Digite aqui o nome do produto"
             [(ngModel)]='produto.nome'>
         </div>
 
         <div class="form-group">
-          <label class="text-monospace" for="imagem">Imagem:</label>
-          <input type="text" class="form-control" id="imagem" placeholder="Coloque o link da imagem."
+          <label class="text-monospace font-weight-bold" for="imagem">Imagem:</label>
+          <input type="text" class="form-control" id="imagem" placeholder="Coloque aqui o link de uma imagem que ilustre seu pedido"
             [(ngModel)]='produto.img'>
         </div>
         <div class="form-group">
-          <label class="text-monospace" for="texto">Texto:</label>
-          <input type="text" class="form-control" id="texto" placeholder="Digite aqui a descrição"
+          <label class="text-monospace font-weight-bold" for="texto">Texto:</label>
+          <input type="text" class="form-control" id="texto" placeholder="Digite aqui a descrição do seu pedido"
             [(ngModel)]='produto.texto'>
         </div>
 
         <div class="form-group">
-          <label class="text-monospace" for="quantidade">Quantidade:</label>
-          <input type="number" class="form-control" id="number" placeholder="Digite a quantidade do produto"
+          <label class="text-monospace font-weight-bold" for="quantidade">Quantidade:</label>
+          <input type="number" class="form-control" id="number" placeholder="Digite aqui a quantidade do seu pedido"
             [(ngModel)]='produto.quantidade'>
         </div>
         <!--Urgência-->
         <fieldset class="form-group">
           <div class="row">
-            <legend class="col-form-label col-sm-10 pt-0">Urgência
+            <legend class="col-form-label col-sm-10 pt-0 font-weight-bold">Urgência:
               <h5></h5>
               <small>Considere urgência somente em caso de calamidade social (tragédias, desastres ou
                 acidentes).</small>
