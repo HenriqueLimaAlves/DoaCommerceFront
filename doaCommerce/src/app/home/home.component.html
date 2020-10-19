@@ -48,9 +48,11 @@
           <div class="card-body">
             <h5 class="card-title">{{item.nome}}</h5>
             <h6>{{item.texto}}</h6>
+            <h6>Quantidade: {{item.quantidade}}</h6>
             <p class="card-text"></p>
           </div>
-         <button ton type="submit" class="btn btn-bg texto text-uppercase font-weight-bold "(click)='btnVerifica()'>Doar</button>
+         <a [routerLink]="['/delete-produto',item.id]"
+                        class="btn btn-bg texto text-uppercase font-weight-bold">Doar</a>
 
         </div>
       </div>
@@ -101,7 +103,7 @@
         <div class="card-body">
           <h5 class="card-title text-center">Atingiu a marca de 487 doações.</h5>
           <p class="card-text">  A rede social Pró-Causas, tem a missão de ser um portal de facilitação de acesso e visibilidade de
-            iniciativas sociaispara que as pessoas possam ajudar de qualquer lugar, quando, onde e como
+            iniciativas sociais para que as pessoas possam ajudar de qualquer lugar, quando, onde e como
             puderem. </p>
 
         </div>
@@ -129,16 +131,15 @@
       <div class="card border-success">
         <img class="card-img-top" src="assets/logoon.PNG"width="110px" height="220px" alt="logo do OnTheGo">
         <div class="card-body">
-          <p class="card-text">O grupo OnTheGo surgiu com a ideia de ajudar ongs e instituições mas com uma estratégia diferente,
-             uma estratégia que fosse mais atrativa para os "doadores" e essa forma seria a seguinte: vender camisetas que estejam relacionadas
-              a temas sociais e repassar esse lucro para todo tipo de instituições e ongs que trabalham nesses temas </p>
+          <p class="card-text">O grupo OnTheGo surgiu com a ideia de ajudar ONGs e instituições, com uma estratégia diferente: Vender camisetas que estejam relacionadas a temas sociais e repassar esse lucro para todo tipo de instituições e ONGs que trabalham com esses temas.
+               </p>
 
         </div>
       </div>
       <div class="card border-success">
         <img class="card-img-top" src="assets/logomao.PNG" width="110px" height="220px"alt="logo da HoldingHands">
         <div class="card-body">
-          <p class="card-text">Rede social com o objetivo de facilitar a colaboração entre interessados em contribuir com orfanatos e tais instituições </p>
+          <p class="card-text">Holding Hands é uma rede social com o objetivo de facilitar a colaboração entre interessados em contribuir com orfanatos e instituições sociais. "A rede que dá as mãos a quem mais precisa"</p>
 
 
         </div>
