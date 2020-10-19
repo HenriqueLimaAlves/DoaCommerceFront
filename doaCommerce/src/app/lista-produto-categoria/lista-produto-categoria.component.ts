@@ -26,11 +26,14 @@ export class ListaProdutoCategoriaComponent implements OnInit {
   ngOnInit() {
     this.categoriaNome = this.route.snapshot.params['categoria']
     this.findAllCategoriaByNome()
+
   }
 
   findAllCategoriaByNome(){
     this.categoriaService.getCategoriaByName(this.categoriaNome).subscribe((resp: Categoria[])=>{
       this.listaCategoria = resp
+
+   
     })
   }
 

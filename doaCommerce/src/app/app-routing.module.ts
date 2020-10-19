@@ -26,7 +26,7 @@ const routes: Routes = [
   { path: 'doe', component: DoeComponent},
   {path: 'editar-produto/:id', component: PutProdutoComponent},
   {path: 'lista-produto-categoria/:categoria', component: ListaProdutoCategoriaComponent},
-  {path: 'delete-produto', component: DeleteProdutoComponent}
+  {path: 'delete-produto/:id', component: DeleteProdutoComponent}
 
 
 ];
